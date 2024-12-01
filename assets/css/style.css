@@ -99,17 +99,22 @@ ul {
     position: fixed;
     bottom: 20px;
     right: 25px;
-    z-index: 5;
-    border-radius: 0;
-    border: 2px solid var(--secondary_color);
-    background: var(--primary_color);
+    z-index: 900;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--lightColor);
+    background: var(--lightColor);
     display: none;
     animation: btt 0.8s ease-in;
 }
+
 .back_to_top:hover {
-    border: 2px solid var(--hover);
-    background: var(--secondary_color);
+    color: #ffffff;
+    border: 2px solid var(--darkColor);
+    background: var(--darkColor);
 }
+
 @keyframes btt {
     from {
         transform: translateY(100px);
@@ -1475,6 +1480,11 @@ footer {
 
     .download-app-text strong {
         font-size: 1.3rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
     }
 }
 
