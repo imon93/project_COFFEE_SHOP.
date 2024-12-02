@@ -594,6 +594,57 @@ header.header-fix .navigation {
 
 /* ================= ======= */
 
+/* CATEGORY AREA */
+#category {
+    max-width: 1100px;
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 60px;
+    overflow-x: auto;
+}
+
+.category-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+    transition: all ease 0.5s;
+}
+
+.category-box:hover {
+    opacity: 0.8;
+}
+
+.category-box-img {
+    height: 100px;
+    width: 100px;
+    background: var(--lightColor);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.category-box-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+.category-box strong {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1d1d1d;
+    margin-top: 10px;
+    text-align: center;
+}
+/* CATEGORY AREA END */
+
+/* ================= ======= */
+
 /* POPULAR AREA */
 #popular {
     max-width: 1100px;
@@ -841,13 +892,15 @@ header.header-fix .navigation {
 /* ================= ======= */
 
 /* RECENT PRODUCT */
-#recent-product {
+#recent-product,
+#newest-product {
     max-width: 1100px;
     width: 90%;
     margin: 50px auto;
 }
 
-.recent-product-container {
+.recent-product-container,
+.newest-product-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
@@ -1286,7 +1339,8 @@ footer {
 /* ================= ======= */
 
 @media (max-width:1024px) {
-    .recent-product-container {
+    .recent-product-container,
+    .newest-product-container {
         grid-template-columns: 1fr 1fr;
         /* grid-template-columns: 1fr 1fr 1fr; */
         grid-gap: 20px;
@@ -1421,6 +1475,7 @@ footer {
 
 @media(max-width:724px) {
     .recent-product-container,
+    .newest-product-container,
     .pp-product-container {
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
@@ -1461,6 +1516,7 @@ footer {
 
 @media(max-width:320px) {
     .recent-product-container,
+    .newest-product-container,
     .pp-product-container {
         grid-template-columns: 1fr;
     }
@@ -1487,7 +1543,6 @@ footer {
         grid-gap: 30px;
     }
 }
-
 
 /* ================= ======= */
 /* END THE PROJECT WITH FULLY RESPONSIVE */
